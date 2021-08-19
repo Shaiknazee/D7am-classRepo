@@ -1,0 +1,11 @@
+public class PaymentServices {
+    private static final String CLIENT_ID = "Your_PayPal_Client_ID";
+    private static final String CLIENT_SECRET = "Your_PayPal_Client_Secret";
+    private static final String MODE = "sandbox";
+ 
+    public String authorizePayment(OrderDetail orderDetail)        
+            throws PayPalRESTException {       
+ 
+        Payer payer = getPayerInformation();
+        RedirectUrls redirectUrls = getRedirectURLs();
+        List<Transaction> listTransaction = getTransactionInformation(orderDetail);
