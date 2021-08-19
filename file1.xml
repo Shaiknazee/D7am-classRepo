@@ -6,7 +6,3 @@ public class PaymentServices {
     public String authorizePayment(OrderDetail orderDetail)        
             throws PayPalRESTException {       
  
-        Payer payer = getPayerInformation();
-        RedirectUrls redirectUrls = getRedirectURLs();
-        List<Transaction> listTransaction = getTransactionInformation(orderDetail);
-         
